@@ -1,0 +1,8 @@
+cd .\Deploy
+echo Set build to this value = %BUILD_NUMBER%
+
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" .\setversion.py  "..\BaseLib\Properties\AssemblyInfo.cs" %BUILD_NUMBER%
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" .\setversion.py  "..\ControlsLib\Properties\AssemblyInfo.cs" %BUILD_NUMBER%
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" .\setversion.py  "..\Properties\AssemblyInfo.cs" %BUILD_NUMBER%
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" .\setversion.py  "..\Shared\CoreLib\Properties\AssemblyInfo.cs" %BUILD_NUMBER%
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" .\set_package_version.py "..\Applications\Client\Client\Package.appxmanifest"  %BUILD_NUMBER%
